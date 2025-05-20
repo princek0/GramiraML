@@ -15,3 +15,6 @@ def process_text(request: TextRequest):
     result = query(parsed_prompt)
     return {"output": result}
 
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
