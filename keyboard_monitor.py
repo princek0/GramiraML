@@ -155,11 +155,13 @@ class KeyboardMonitor:
                         if edit_control:
                             logger.info("Found edit control, attempting direct replacement")
                             edit_control.SetValue(corrected_text)
+                            self.buffer = ""  # Clear buffer after successful replacement
                             return
                     
                     # If no edit control, try clipboard method
                     logger.info("Using clipboard method for text replacement")
                     self._replace_text_clipboard(corrected_text)
+                    self.buffer = ""  # Clear buffer after successful replacement
                 except Exception as e:
                     logger.error(f"Text replacement failed: {str(e)}")
                     logger.error(traceback.format_exc())
