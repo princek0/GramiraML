@@ -1,0 +1,109 @@
+2025-05-20 17:08:08,847 - __main__ - INFO - Requesting admin privileges...
+2025-05-20 17:08:10,888 - __main__ - INFO - Running with admin privileges
+2025-05-20 17:08:10,888 - __main__ - INFO - Initializing COM...
+2025-05-20 17:08:10,889 - __main__ - INFO - Starting GramiraML monitor...
+2025-05-20 17:08:11,178 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Prince\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-05-20 17:08:11,178 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\Prince\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-05-20 17:08:12,206 - keyboard_monitor - INFO - COM initialized in main thread
+2025-05-20 17:08:12,207 - keyboard_monitor - INFO - KeyboardMonitor initialized with trigger: '@@fix'
+2025-05-20 17:08:12,207 - keyboard_monitor - INFO - Starting keyboard monitoring
+2025-05-20 17:08:12,208 - keyboard_monitor - INFO - Starting queue processing thread
+2025-05-20 17:08:12,208 - keyboard_monitor - INFO - Processing thread started
+2025-05-20 17:08:12,377 - keyboard_monitor - INFO - Keyboard hook installed
+2025-05-20 17:08:17,495 - keyboard_monitor - INFO - Trigger detected! Text to process: 'can u fix me'
+2025-05-20 17:08:17,529 - keyboard_monitor - INFO - Processing text from queue: 'can u fix me'
+2025-05-20 17:08:17,530 - keyboard_monitor - INFO - Making API call for text: 'can u fix me@@fix'
+2025-05-20 17:08:24,086 - keyboard_monitor - INFO - API Response: ' Can you fix it for me?'
+2025-05-20 17:08:24,086 - keyboard_monitor - INFO - Final text to use: ' Can you fix it for me?'
+2025-05-20 17:08:24,086 - keyboard_monitor - INFO - Getting focused element
+2025-05-20 17:08:24,146 - keyboard_monitor - INFO - Found focused element: ControlType: ComboBoxControl    ClassName:     AutomationId: input    Rect: (2413,478,3347,539)[934x61]    Name: 'Search Google or type a URL'    Handle: 0x0(0)
+2025-05-20 17:08:24,146 - keyboard_monitor - INFO - Using clipboard method for text replacement
+2025-05-20 17:08:24,146 - keyboard_monitor - INFO - Starting clipboard replacement with text: ' Can you fix it for me?'
+2025-05-20 17:08:25,392 - keyboard_monitor - INFO - Clipboard replacement completed
+2025-05-20 17:08:47,052 - keyboard_monitor - INFO - Trigger detected! Text to process: 'Can you fix it for me?hi my name is prince btw'
+2025-05-20 17:08:47,086 - keyboard_monitor - INFO - Processing text from queue: 'Can you fix it for me?hi my name is prince btw'
+2025-05-20 17:08:47,086 - keyboard_monitor - INFO - Making API call for text: 'Can you fix it for me?hi my name is prince btw@@fix'
+2025-05-20 17:08:52,202 - keyboard_monitor - INFO - API Response: ' Could you please correct this for me? I'm Prince, by the way.'
+2025-05-20 17:08:52,202 - keyboard_monitor - INFO - Final text to use: ' Could you please correct this for me? I'm Prince, by the way.'
+2025-05-20 17:08:52,203 - keyboard_monitor - INFO - Getting focused element
+2025-05-20 17:08:52,213 - keyboard_monitor - INFO - Found focused element: ControlType: ComboBoxControl    ClassName:     AutomationId: input    Rect: (2413,478,3347,539)[934x61]    Name: 'Search Google or type a URL'    Handle: 0x0(0)
+2025-05-20 17:08:52,213 - keyboard_monitor - INFO - Using clipboard method for text replacement
+2025-05-20 17:08:52,214 - keyboard_monitor - INFO - Starting clipboard replacement with text: ' Could you please correct this for me? I'm Prince, by the way.'
+2025-05-20 17:08:53,492 - keyboard_monitor - INFO - Clipboard replacement completed
+2025-05-20 17:10:07,156 - __main__ - INFO - Requesting admin privileges...
+2025-05-20 17:10:08,817 - __main__ - INFO - Running with admin privileges
+2025-05-20 17:10:08,817 - __main__ - INFO - Initializing COM...
+2025-05-20 17:10:08,818 - __main__ - INFO - Starting GramiraML monitor...
+2025-05-20 17:10:09,040 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Prince\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-05-20 17:10:09,040 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\Prince\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-05-20 17:10:10,062 - keyboard_monitor - INFO - COM initialized in main thread
+2025-05-20 17:10:10,062 - keyboard_monitor - INFO - KeyboardMonitor initialized with trigger: '@@fix'
+2025-05-20 17:10:10,062 - keyboard_monitor - INFO - Starting keyboard monitoring
+2025-05-20 17:10:10,063 - keyboard_monitor - INFO - Starting queue processing thread
+2025-05-20 17:10:10,063 - keyboard_monitor - INFO - Processing thread started
+2025-05-20 17:10:10,427 - keyboard_monitor - INFO - Keyboard hook installed
+2025-05-20 17:10:43,464 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:10:49,873 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:10:55,061 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:11:00,669 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:11:05,702 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:11:10,146 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:11:25,459 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:11:59,142 - __main__ - INFO - Requesting admin privileges...
+2025-05-20 17:12:00,847 - __main__ - INFO - Running with admin privileges
+2025-05-20 17:12:00,847 - __main__ - INFO - Initializing COM...
+2025-05-20 17:12:00,847 - __main__ - INFO - Starting GramiraML monitor...
+2025-05-20 17:12:01,079 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Prince\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-05-20 17:12:01,079 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\Prince\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-05-20 17:12:02,115 - keyboard_monitor - INFO - COM initialized in main thread
+2025-05-20 17:12:02,115 - keyboard_monitor - INFO - KeyboardMonitor initialized with trigger: '@@fix'
+2025-05-20 17:12:02,116 - keyboard_monitor - INFO - Starting keyboard monitoring
+2025-05-20 17:12:02,116 - keyboard_monitor - INFO - Starting queue processing thread
+2025-05-20 17:12:02,117 - keyboard_monitor - INFO - Processing thread started
+2025-05-20 17:12:02,290 - keyboard_monitor - INFO - Keyboard hook installed
+2025-05-20 17:12:07,632 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:13:08,422 - __main__ - INFO - Requesting admin privileges...
+2025-05-20 17:13:10,212 - __main__ - INFO - Running with admin privileges
+2025-05-20 17:13:10,213 - __main__ - INFO - Initializing COM...
+2025-05-20 17:13:10,213 - __main__ - INFO - Starting GramiraML monitor...
+2025-05-20 17:13:10,409 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Prince\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-05-20 17:13:10,409 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\Prince\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-05-20 17:13:11,442 - keyboard_monitor - INFO - COM initialized in main thread
+2025-05-20 17:13:11,442 - keyboard_monitor - INFO - KeyboardMonitor initialized with trigger: '@@fix'
+2025-05-20 17:13:11,443 - keyboard_monitor - INFO - Starting keyboard monitoring
+2025-05-20 17:13:11,443 - keyboard_monitor - INFO - Starting queue processing thread
+2025-05-20 17:13:11,443 - keyboard_monitor - INFO - Processing thread started
+2025-05-20 17:13:11,584 - keyboard_monitor - INFO - Keyboard hook installed
+2025-05-20 17:13:16,769 - keyboard_monitor - INFO - Trigger detected but no text to process (buffer: '@@fix')
+2025-05-20 17:13:57,311 - __main__ - INFO - Requesting admin privileges...
+2025-05-20 17:13:59,391 - __main__ - INFO - Running with admin privileges
+2025-05-20 17:13:59,392 - __main__ - INFO - Initializing COM...
+2025-05-20 17:13:59,392 - __main__ - INFO - Starting GramiraML monitor...
+2025-05-20 17:13:59,618 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\Prince\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-05-20 17:13:59,619 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\Prince\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-05-20 17:14:00,682 - keyboard_monitor - INFO - COM initialized in main thread
+2025-05-20 17:14:00,683 - keyboard_monitor - INFO - KeyboardMonitor initialized with trigger: '@@fix'
+2025-05-20 17:14:00,683 - keyboard_monitor - INFO - Starting keyboard monitoring
+2025-05-20 17:14:00,684 - keyboard_monitor - INFO - Starting queue processing thread
+2025-05-20 17:14:00,684 - keyboard_monitor - INFO - Processing thread started
+2025-05-20 17:14:00,826 - keyboard_monitor - INFO - Keyboard hook installed
+2025-05-20 17:14:05,077 - keyboard_monitor - INFO - Trigger detected! Text to process: 'can u fix me'
+2025-05-20 17:14:05,103 - keyboard_monitor - INFO - Processing text from queue: 'can u fix me'
+2025-05-20 17:14:05,104 - keyboard_monitor - INFO - Making API call for text: 'can u fix me@@fix'
+2025-05-20 17:14:18,775 - keyboard_monitor - INFO - API Response: ' Can you fix it for me?'
+2025-05-20 17:14:18,775 - keyboard_monitor - INFO - Final text to use: ' Can you fix it for me?'
+2025-05-20 17:14:18,776 - keyboard_monitor - INFO - Getting focused element
+2025-05-20 17:14:18,897 - keyboard_monitor - INFO - Found focused element: ControlType: ComboBoxControl    ClassName:     AutomationId: input    Rect: (2413,478,3347,539)[934x61]    Name: 'Search Google or type a URL'    Handle: 0x0(0)
+2025-05-20 17:14:18,897 - keyboard_monitor - INFO - Using clipboard method for text replacement
+2025-05-20 17:14:18,898 - keyboard_monitor - INFO - Starting clipboard replacement with text: ' Can you fix it for me?'
+2025-05-20 17:14:20,144 - keyboard_monitor - INFO - Clipboard replacement completed
+2025-05-20 17:14:28,390 - keyboard_monitor - INFO - Trigger detected! Text to process: 'Can you fix it for mehow about fix this'
+2025-05-20 17:14:28,478 - keyboard_monitor - INFO - Processing text from queue: 'Can you fix it for mehow about fix this'
+2025-05-20 17:14:28,479 - keyboard_monitor - INFO - Making API call for text: 'Can you fix it for mehow about fix this@@fix'
+2025-05-20 17:14:33,432 - keyboard_monitor - INFO - API Response: ' Could you please fix it for me? Let's work on fixing this instead.'
+2025-05-20 17:14:33,432 - keyboard_monitor - INFO - Final text to use: ' Could you please fix it for me? Let's work on fixing this instead.'
+2025-05-20 17:14:33,433 - keyboard_monitor - INFO - Getting focused element
+2025-05-20 17:14:33,445 - keyboard_monitor - INFO - Found focused element: ControlType: ComboBoxControl    ClassName:     AutomationId: input    Rect: (2413,478,3347,539)[934x61]    Name: 'Search Google or type a URL'    Handle: 0x0(0)
+2025-05-20 17:14:33,445 - keyboard_monitor - INFO - Using clipboard method for text replacement
+2025-05-20 17:14:33,446 - keyboard_monitor - INFO - Starting clipboard replacement with text: ' Could you please fix it for me? Let's work on fixing this instead.'
+2025-05-20 17:14:34,732 - keyboard_monitor - INFO - Clipboard replacement completed

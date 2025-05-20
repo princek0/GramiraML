@@ -1,3 +1,8 @@
 fastapi
 pydantic
-requests 
+requests
+keyboard==0.13.5
+uiautomation==2.0.18
+pyautogui==0.9.54
+python-logging-loki==0.3.1
+pywin32==310 
