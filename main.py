@@ -1,7 +1,8 @@
 import keyboard
 import time
 from text_processor import select_and_copy_text, paste_text
-from api_client import process_text
+from ollama_client import query
+from command_parser import parse
 from collections import deque
 
 # Buffer to store last few characters
@@ -38,7 +39,7 @@ def process_trigger():
     """
     Handles the @@fix trigger sequence:
     1. Select and copy current text
-    2. Process text through API
+    2. Process text through Ollama
     3. Paste processed text back
     """
     print("[DEBUG] Starting text processing...")
@@ -51,13 +52,15 @@ def process_trigger():
         return
     print(f"[DEBUG] Successfully copied text: {original_text[:50]}...")
     
-    # Process text through API
-    print("[DEBUG] Sending text to API...")
-    processed_text = process_text(original_text)
-    if not processed_text:
-        print("[ERROR] Failed to get response from API")
+    # Process text through Ollama
+    print("[DEBUG] Sending text to Ollama...")
+    try:
+        parsed_prompt = parse(original_text)
+        processed_text = query(parsed_prompt)
+        print(f"[DEBUG] Received processed text: {processed_text[:50]}...")
+    except Exception as e:
+        print(f"[ERROR] Failed to process text with Ollama: {str(e)}")
         return
-    print(f"[DEBUG] Received processed text: {processed_text[:50]}...")
     
     # Paste processed text
     print("[DEBUG] Attempting to paste processed text...")
