@@ -1,11 +1,13 @@
 import keyboard
 import time
-from text_processor import select_and_copy_text, paste_text
-from openai_client import query
+from text_processor import select_and_copy_text
+from openai_client import query_stream
 from command_parser import parse
 from collections import deque
 from dotenv import load_dotenv
 import os
+from text_streamer import TextStreamer
+import pyautogui
 
 # Load environment variables from .env file
 load_dotenv()
@@ -13,6 +15,9 @@ load_dotenv()
 # Buffer to store last few characters
 CHAR_BUFFER_SIZE = 5
 char_buffer = deque(maxlen=CHAR_BUFFER_SIZE)
+
+# Initialize text streamer
+text_streamer = TextStreamer()
 
 def check_for_trigger():
     """Check if the buffer contains @@fix"""
@@ -44,8 +49,8 @@ def process_trigger():
     """
     Handles the @@fix trigger sequence:
     1. Select and copy current text
-    2. Process text through OpenAI
-    3. Paste processed text back
+    2. Stream processed text through OpenAI in real-time
+    3. Type each chunk as it arrives
     """
     print("[DEBUG] Starting text processing...")
     
@@ -61,16 +66,24 @@ def process_trigger():
     print("[DEBUG] Sending text to OpenAI...")
     try:
         parsed_prompt = parse(original_text)
-        processed_text = query(parsed_prompt)
-        print(f"[DEBUG] Received processed text: {processed_text[:50]}...")
+        
+        # Select all text first, before starting the stream
+        pyautogui.hotkey('ctrl', 'a')
+        time.sleep(0.1)  # Small delay to ensure selection
+        
+        # Stream and type in real-time
+        print("[DEBUG] Starting real-time streaming...")
+        for chunk in query_stream(parsed_prompt):
+            # Type each chunk as it arrives
+            if not text_streamer._simulate_key(chunk):
+                print("[DEBUG] Streaming interrupted by user")
+                return
+                
+        print("[DEBUG] Streaming completed successfully")
+        
     except Exception as e:
         print(f"[ERROR] Failed to process text with OpenAI: {str(e)}")
         return
-    
-    # Paste processed text
-    print("[DEBUG] Attempting to paste processed text...")
-    paste_text(processed_text)
-    print("[DEBUG] Paste operation completed")
 
 def main():
     print("Starting @@fix monitor...")
