@@ -1,9 +1,14 @@
 import keyboard
 import time
 from text_processor import select_and_copy_text, paste_text
-from ollama_client import query
+from openai_client import query
 from command_parser import parse
 from collections import deque
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Buffer to store last few characters
 CHAR_BUFFER_SIZE = 5
@@ -39,7 +44,7 @@ def process_trigger():
     """
     Handles the @@fix trigger sequence:
     1. Select and copy current text
-    2. Process text through Ollama
+    2. Process text through OpenAI
     3. Paste processed text back
     """
     print("[DEBUG] Starting text processing...")
@@ -52,14 +57,14 @@ def process_trigger():
         return
     print(f"[DEBUG] Successfully copied text: {original_text[:50]}...")
     
-    # Process text through Ollama
-    print("[DEBUG] Sending text to Ollama...")
+    # Process text through OpenAI
+    print("[DEBUG] Sending text to OpenAI...")
     try:
         parsed_prompt = parse(original_text)
         processed_text = query(parsed_prompt)
         print(f"[DEBUG] Received processed text: {processed_text[:50]}...")
     except Exception as e:
-        print(f"[ERROR] Failed to process text with Ollama: {str(e)}")
+        print(f"[ERROR] Failed to process text with OpenAI: {str(e)}")
         return
     
     # Paste processed text
