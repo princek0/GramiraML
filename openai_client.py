@@ -1,8 +1,11 @@
 import time
 from openai import OpenAI
+from dotenv import load_dotenv
 import os
 import sys
 from typing import Generator
+
+load_dotenv()
 
 def get_api_key():
     """
@@ -45,7 +48,7 @@ def query_stream(prompt: str, model: str = "gpt-4.1-nano") -> Generator[str, Non
         response = client.chat.completions.create(
             model=model,
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that improves text by fixing grammar, spelling, and style while maintaining the original meaning."},
+                {"role": "system", "content": "You are a helpful assistant that improves text by fixing grammar, spelling, style, tone, language, punctuation, and other errors while maintaining the original meaning."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.3,
@@ -68,7 +71,7 @@ def query_stream(prompt: str, model: str = "gpt-4.1-nano") -> Generator[str, Non
         raise
 
 # Keep the original query function for non-streaming use cases
-def query(prompt: str, model: str = "gpt-4-0125-preview") -> str:
+def query(prompt: str, model: str = "gpt-4.1-nano") -> str:
     """
     Query the OpenAI API with the given prompt (non-streaming version).
     """
