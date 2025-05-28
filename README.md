@@ -1,35 +1,47 @@
 # GramiraML - Global Text Correction Tool
 
-A Python application that provides instant grammar and text correction anywhere on your system. Simply type "@@fix" after any text to get AI-powered corrections.
+<div align="center">
 
-## Features
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-- Global keyboard monitoring for "@@fix" trigger
-- Instant text selection and replacement
-- AI-powered text correction using OpenAI's GPT-4
-- Works in any text input field (browsers, applications, etc.)
-- High-quality text correction with OpenAI's advanced language models
+</div>
 
-## Prerequisites
+GramiraML is a powerful Python application that provides instant grammar and text correction anywhere on your system. Simply type "@@fix" after any text to get AI-powered corrections powered by OpenAI's GPT-4.
 
-- Python 3.8+
+## ✨ Features
+
+- 🎯 **Global Text Correction**: Works in any text input field across your system
+- ⚡ **Instant Trigger**: Type "@@fix" after any text for immediate correction
+- 🤖 **AI-Powered**: Utilizes OpenAI's GPT-4 for high-quality text correction
+- 🔄 **Smart Selection**: Automatically selects and replaces text with corrections
+- 🛡️ **Secure**: Your API key is stored locally and never shared
+- 📝 **Universal Compatibility**: Works in browsers, applications, and any text input field
+
+## 📋 Prerequisites
+
+- Python 3.8 or higher
 - OpenAI API key
 - Administrator privileges (required for global keyboard monitoring)
+- Windows 10/11 (currently Windows-only due to UI automation requirements)
 
-## Installation
+## 🚀 Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/GramiraML.git
-cd GramiraML
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/GramiraML.git
+   cd GramiraML
+   ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Set up your OpenAI API key (choose one method):
+3. **Set up your OpenAI API key:**
+
+   Choose one of the following methods:
 
    a. Using a .env file (recommended):
    ```bash
@@ -37,10 +49,10 @@ pip install -r requirements.txt
    cp .env.template .env
    
    # Edit .env with your API key
-   # Replace 'your-api-key-here' with your actual OpenAI API key
+   OPENAI_API_KEY=your-api-key-here
    ```
 
-   b. Using environment variables (temporary):
+   b. Using environment variables:
    ```bash
    # Windows PowerShell
    $env:OPENAI_API_KEY="your-api-key-here"
@@ -49,28 +61,104 @@ pip install -r requirements.txt
    export OPENAI_API_KEY="your-api-key-here"
    ```
 
-   Get your API key from: https://platform.openai.com/api-keys
+   Get your API key from: [OpenAI API Keys](https://platform.openai.com/api-keys)
 
-## Distribution
+## 💻 Usage
+
+1. **Start the application:**
+   ```bash
+   python main.py
+   ```
+
+2. **Using the correction tool:**
+   - Type any text in any application
+   - Add "@@fix" at the end of the text you want to correct
+   - The application will automatically:
+     - Select the text
+     - Send it to OpenAI for correction
+     - Replace it with the corrected version
+
+## 📦 Project Structure
+
+```
+GramiraML/
+├── main.py              # Main application entry point
+├── text_processor.py    # Text processing and correction logic
+├── command_parser.py    # Command parsing and handling
+├── openai_client.py     # OpenAI API integration
+├── text_streamer.py     # Text streaming and monitoring
+├── requirements.txt     # Project dependencies
+└── .env.template       # Environment variables template
+```
+
+## 🔧 Dependencies
+
+- `openai>=1.12.0`: OpenAI API client
+- `keyboard==0.13.5`: Global keyboard monitoring
+- `uiautomation==2.0.18`: Windows UI automation
+- `pyautogui==0.9.54`: GUI automation
+- `python-dotenv>=1.0.0`: Environment variable management
+- `pywin32==310`: Windows API integration
+- `pyperclip==1.8.2`: Clipboard management
+- Additional dependencies in `requirements.txt`
+
+## 📦 Distribution
 
 To distribute this application to other users:
 
-1. Create a release package:
+1. **Create a release package:**
    ```bash
    # Create a zip file with the necessary files
-   zip -r GramiraML.zip main.py text_processor.py command_parser.py openai_client.py requirements.txt .env.template README.md
+   zip -r GramiraML.zip main.py text_processor.py command_parser.py openai_client.py text_streamer.py requirements.txt .env.template README.md
    ```
 
-2. Users should:
+2. **User Setup Instructions:**
    - Extract the zip file
    - Install Python 3.8 or higher
    - Run `pip install -r requirements.txt`
    - Copy `.env.template` to `.env` and add their API key
    - Run `python main.py`
 
-Note: Each user needs their own OpenAI API key. The application will guide them through the setup process if the key is missing.
+> **Note:** Each user needs their own OpenAI API key. The application will guide them through the setup process if the key is missing.
 
-## Usage
+## 🔒 Security
 
-1. Start the keyboard monitor:
-```
+- Your OpenAI API key is stored locally in the `.env` file
+- The application never transmits your API key to any third-party services
+- All text processing is done through secure OpenAI API endpoints
+- No data is stored locally beyond the API key
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## ⚠️ Known Limitations
+
+- Currently Windows-only due to UI automation requirements
+- Requires administrator privileges for global keyboard monitoring
+- Internet connection required for OpenAI API access
+- May have slight delays depending on API response time
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Ensure you have administrator privileges
+2. Verify your OpenAI API key is correctly set in the `.env` file
+3. Check your internet connection
+4. Ensure all dependencies are installed correctly
+5. Check the application logs for detailed error messages
+
+## 📞 Support
+
+For support, please open an issue in the GitHub repository or contact the maintainers.
