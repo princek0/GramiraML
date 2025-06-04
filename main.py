@@ -13,16 +13,25 @@ import pyautogui
 load_dotenv()
 
 # Buffer to store last few characters
-CHAR_BUFFER_SIZE = 5
+CHAR_BUFFER_SIZE = 10  # Increased to accommodate longer trigger words
 char_buffer = deque(maxlen=CHAR_BUFFER_SIZE)
+
+# List of valid trigger words
+TRIGGERS = ['@@fix', '@@spanish', '@@genz', '@@formal', '@@casual', '@@technical', '@@shorten', '@@expand', '@@summarize', '@@paraphrase']
 
 # Initialize text streamer
 text_streamer = TextStreamer()
 
-def check_for_trigger():
-    """Check if the buffer contains @@fix"""
+def check_for_trigger() -> str | None:
+    """
+    Check if the buffer contains any of the valid trigger words.
+    Returns the detected trigger word if found, None otherwise.
+    """
     buffer_str = ''.join(char_buffer)
-    return buffer_str.endswith('@@fix')
+    for trigger in TRIGGERS:
+        if buffer_str.endswith(trigger):
+            return trigger
+    return None
 
 def on_key_event(event):
     """
@@ -38,8 +47,9 @@ def on_key_event(event):
             char_buffer.append('@')
         
         # Check for trigger
-        if check_for_trigger():
-            print("\n[DEBUG] @@fix detected in buffer!")
+        detected_trigger = check_for_trigger()
+        if detected_trigger:
+            print(f"\n[DEBUG] {detected_trigger} detected in buffer!")
             # Clear the buffer
             char_buffer.clear()
             # Process the text

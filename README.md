@@ -1,4 +1,4 @@
-# GramiraML - Global Text Correction Tool
+# GramiraML - Global Text Transformation Tool
 
 <div align="center">
 
@@ -8,16 +8,32 @@
 
 </div>
 
-GramiraML is a powerful Python application that provides instant grammar and text correction anywhere on your system. Simply type "@@fix" after any text to get AI-powered corrections powered by OpenAI's GPT-4.
+GramiraML is a powerful Python application that provides instant text transformation and correction anywhere on your system. Simply type any of the supported triggers (e.g., "@@fix", "@@spanish", "@@formal") after any text to get AI-powered transformations powered by OpenAI's GPT-4.
 
 ## ✨ Features
 
-- 🎯 **Global Text Correction**: Works in any text input field across your system
-- ⚡ **Instant Trigger**: Type "@@fix" after any text for immediate correction
-- 🤖 **AI-Powered**: Utilizes OpenAI's GPT-4 for high-quality text correction
-- 🔄 **Smart Selection**: Automatically selects and replaces text with corrections
+- 🎯 **Global Text Transformation**: Works in any text input field across your system
+- ⚡ **Multiple Triggers**: Use various triggers for different text transformations
+- 🤖 **AI-Powered**: Utilizes OpenAI's GPT-4 for high-quality text processing
+- 🔄 **Smart Selection**: Automatically selects and replaces text with transformed version
 - 🛡️ **Secure**: Your API key is stored locally and never shared
 - 📝 **Universal Compatibility**: Works in browsers, applications, and any text input field
+- 🌍 **Language Support**: Translate text to different languages
+- 🎨 **Style Transformations**: Convert text to different writing styles and tones
+
+## 🎮 Available Triggers
+
+### Text Correction
+- `@@fix` - Improve grammar and spelling of the provided text
+
+### Language Translation
+- `@@spanish` - Translate the text to Spanish
+
+### Writing Style
+- `@@formal` - Convert the text to formal language
+- `@@casual` - Convert the text to casual language
+- `@@technical` - Convert the text to technical language
+- `@@genz` - Convert the text to GenZ slang
 
 ## 📋 Prerequisites
 
@@ -70,13 +86,13 @@ GramiraML is a powerful Python application that provides instant grammar and tex
    python main.py
    ```
 
-2. **Using the correction tool:**
+2. **Using the transformation tool:**
    - Type any text in any application
-   - Add "@@fix" at the end of the text you want to correct
+   - Add any of the supported triggers (e.g., "@@fix", "@@spanish", "@@formal") at the end of the text
    - The application will automatically:
      - Select the text
-     - Send it to OpenAI for correction
-     - Replace it with the corrected version
+     - Send it to OpenAI for transformation
+     - Replace it with the transformed version
 
 ## 📦 Project Structure
 
