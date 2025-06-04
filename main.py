@@ -57,8 +57,8 @@ def on_key_event(event):
 
 def process_trigger():
     """
-    Handles the @@fix trigger sequence:
-    1. Select and copy current text
+    Handles the @@fix and other triggers sequence:
+    1. Select and copy current text 
     2. Stream processed text through OpenAI in real-time
     3. Type each chunk as it arrives
     """
@@ -96,7 +96,7 @@ def process_trigger():
         return
 
 def main():
-    print("Starting @@fix monitor...")
+    print("Starting monitor...")
     print("Press Ctrl+C to exit")
     print("[DEBUG] Starting keyboard monitoring...")
     
