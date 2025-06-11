@@ -8,7 +8,7 @@ def parse(input: str) -> str:
     if input.endswith("@@spanish"):
         prompt = "Translate the provided text to Spanish. Only reply with the translated text. Do not reply with anything else but the translated text. Do not include @@spanish in your answer. Here is the provided text:"
         return f"{prompt}+{input}" 
-    
+
     if input.endswith("@@genz"):
         prompt = "Translate the provided text to GenZ slang. Only reply with the translated text. Do not reply with anything else but the translated text. Do not include @@genz in your answer. Here is the provided text:"
         return f"{prompt}+{input}"
