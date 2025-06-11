@@ -1,14 +1,14 @@
-# GramiraML - Global Text Transformation Tool
+# Gramira - Global Text Transformation Tool
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 </div>
 
-GramiraML is a powerful Python application that provides instant text transformation and correction anywhere on your system. Simply type any of the supported triggers (e.g., "@@fix", "@@spanish", "@@formal") after any text to get AI-powered transformations powered by OpenAI's GPT-4.
+Gramira is a powerful Python application that provides instant text transformation and correction anywhere on your system. Simply type any of the supported triggers (e.g., "@@fix", "@@spanish", "@@formal") after any text to get AI-powered transformations powered by OpenAI's GPT-4.
 
 ## ✨ Features
 
